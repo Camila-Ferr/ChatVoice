@@ -21,9 +21,8 @@ public class ServerThread extends Thread{
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            audio_out.close();
-            audio_out.drain();
-            System.out.println("stop");
+            
+
         }
     }
 }
