@@ -53,6 +53,14 @@
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="18.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label fx:id="nomeInvalidoLabel" text="Nome Inválido" textFill="#e8334b">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Roboto Slab Bold" size="32.0" />
+                                 </font>
+                              </Label>
                               <ImageView fitHeight="75.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/icon-button-cyan.png" />

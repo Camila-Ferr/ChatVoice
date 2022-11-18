@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -364,7 +365,40 @@
                      </children>
                   </VBox>
                </content></ScrollPane>
-            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="gray-background" stylesheets="@../values/style.css" />
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="gray-background" stylesheets="@../values/style.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="97.0" prefWidth="254.0">
+                     <children>
+                        <Label text="Pesquisa :" textFill="#fcfcfc">
+                           <font>
+                              <Font name="Roboto Slab Regular" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="97.0" prefWidth="357.0">
+                     <children>
+                        <TextField prefHeight="20.0" prefWidth="357.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="97.0" prefWidth="177.0">
+                     <children>
+                        <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="55.0" text="Button" visible="false">
+                           <VBox.margin>
+                              <Insets bottom="-40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <ImageView fitHeight="71.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icon-button-cyan.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="-15.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children></HBox>
          </children>
       </VBox>
    </center>
