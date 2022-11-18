@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Cliente {
     private final String SERVER_ADRESS = "127.0.0.1";
     private static final int PORT_SERVIDOR = 9000;
+    private static final int PORT_LIGACAO = 6000;
     private ClienteSocket clientSocket;
     private Scanner scanner;
     public static boolean calling = false;
@@ -26,7 +27,7 @@ public class Cliente {
 
     private void mensage_loop() throws IOException{
         if (scanner.nextInt() == 1){
-            Ligacao ligacao = new Ligacao(scanner.nextInt());
+            Ligacao ligacao = new Ligacao(PORT_LIGACAO);
             Cliente.calling = true;
             ligacao.init_audio_receive();
             ligacao.init_audio_send();

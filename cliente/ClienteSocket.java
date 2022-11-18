@@ -30,6 +30,11 @@ public class ClienteSocket {
         String mensagem = "";
         mensagem = in.readLine();
         limpaBuffer();
-        return mensagem;
+        return replace(mensagem);
+    }
+
+    public String replace(String mensagem){
+        String nova_mensagem = mensagem.replaceAll("%", "\n");
+        return nova_mensagem;
     }
 }
