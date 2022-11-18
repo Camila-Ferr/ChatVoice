@@ -1,4 +1,4 @@
-package servidoRegistros;
+package servidorRegistros;
 
 import java.io.*;
 import java.net.Socket;
