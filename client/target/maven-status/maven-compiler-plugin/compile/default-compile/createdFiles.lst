@@ -1,0 +1,10 @@
+com/grupinix/client/controllers/ChatController.class
+com/grupinix/client/controllers/LoginController.class
+com/grupinix/client/SendThread.class
+module-info.class
+com/grupinix/client/ClienteSocket.class
+com/grupinix/client/Application.class
+com/grupinix/client/Ligacao.class
+com/grupinix/client/controllers/VirtualCallController.class
+com/grupinix/client/ReceiveThread.class
+com/grupinix/client/controllers/RegisterController.class

@@ -1,0 +1,10 @@
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/module-info.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/controllers/LoginController.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/Application.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/controllers/RegisterController.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/controllers/VirtualCallController.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/ReceiveThread.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/Ligacao.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/ClienteSocket.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/controllers/ChatController.java
+/home/mozart/Documents/Programing/chatVoice/ChatVoice/client/src/main/java/com/grupinix/client/SendThread.java
