@@ -9,6 +9,7 @@ public class ServidorSocket {
     private BufferedReader in;
     private final PrintWriter out;
     private String client_id = null;
+    private Boolean ligacao = false;
 
     public ServidorSocket(Socket socket) throws IOException {
         this.socket = socket;
@@ -27,7 +28,6 @@ public class ServidorSocket {
     public String getMessage() throws IOException {
         String msg = " ";
         msg = in.readLine();
-        limpaBuffer();
         return msg;
     }
 
@@ -40,6 +40,13 @@ public class ServidorSocket {
     public void setClient_id(String client_id) {
         this.client_id = client_id;
     }
+    public Boolean getLigacao(){
+        return ligacao;
+    }
+    public void setLigacao(Boolean ligacao) {
+        this.ligacao = ligacao;
+    }
+
 
 
 

@@ -32,6 +32,7 @@ public class Servidor {
             boolean prossegue = Comandos.valida_nome(clients, cliente.getClient_id());
             
             if (prossegue){
+                Comandos.resposta(cliente,true);
                 System.out.println(" Cliente : "+cliente.getClient_id());
                 clients.add(cliente);
                 Comandos.mostra_online(cliente,clients);
@@ -39,7 +40,6 @@ public class Servidor {
                 try { 
                     new Thread(() -> {
                         try {
-                            Comandos.envia_online(cliente,clients);
                             clientMessageLoop(cliente);
                         } catch (Exception e) {
                             clients.remove(cliente);
@@ -56,6 +56,10 @@ public class Servidor {
                         throw new RuntimeException(e);
                     }
             }
+            else{
+                Comandos.resposta(cliente,false);
+                cliente.closeS();
+            }
         }
     }
 
@@ -71,11 +75,25 @@ public class Servidor {
                         return;
                     }
                     else if ("*atualiza".equals(message)){
-                        Comandos.mostra_online(socket, clients);
+                        System.out.println(message);
+                        Comandos.envia_online(socket, clients);
+                    }
+                    else if ("*ligacao".equals(message)){
+                        System.out.println(message);
+                        Comandos.em_ligacao(socket, clients);
                     }
                     else if ("*acha".equals(message)){
+                        System.out.println("****");
                         String nome = socket.getMessage();
-                        Comandos.procura_cliente(clients, nome);
+                        System.out.println(nome);
+                        ServidorSocket socket_procurado = Comandos.procura_cliente(clients, nome);
+                        if (socket_procurado!= null){
+                            socket.sendMessage(socket_procurado.getClient_id());
+                        }
+                        else{
+                            socket.sendMessage("()");
+                        }
+                        
                     }
 
                 } 

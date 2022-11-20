@@ -1,4 +1,4 @@
-package cliente;
+package com.grupinix.client;
 
 import javax.sound.sampled.*;
 import java.net.DatagramSocket;
