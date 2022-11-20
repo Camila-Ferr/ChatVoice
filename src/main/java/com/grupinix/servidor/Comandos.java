@@ -1,4 +1,4 @@
-package servidorRegistros;
+package com.grupinix.servidor;
 
 import java.io.IOException;
 import java.util.ArrayList;
