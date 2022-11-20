@@ -19,7 +19,7 @@ public class Application extends javafx.application.Application {
         stage.setScene(scene);
         stage.setTitle("Chat");
         stage.setWidth(1026);
-        stage.setHeight(900);
+        stage.setHeight(800);
         stage.show();
     }
 

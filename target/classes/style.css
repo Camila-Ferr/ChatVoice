@@ -22,6 +22,12 @@
     -fx-color: rgba(239, 242, 255);
 }
 
+.register-letters{
+    -fx-color: #46474A;
+    -fx-font-family: "Roboto Slab";
+    -fx-font-size: 15px;
+}
+
 .chat-background{
     -fx-background-color: #12B886;
 }

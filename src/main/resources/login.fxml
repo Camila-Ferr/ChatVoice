@@ -36,8 +36,11 @@
                                         <Cursor fx:constant="OPEN_HAND" />
                                     </cursor>
                                     <VBox.margin>
-                                        <Insets top="-20.0" />
-                                    </VBox.margin></Button>
+                                        <Insets left="-50.0" />
+                                    </VBox.margin>
+                                    <HBox.margin>
+                                        <Insets left="-50.0" />
+                                    </HBox.margin></Button>
                             </children>
                         </HBox>
                         <HBox alignment="TOP_CENTER" prefHeight="464.0" prefWidth="681.0">

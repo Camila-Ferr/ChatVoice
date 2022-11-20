@@ -171,38 +171,39 @@ public class ChatController {
             for (int i = 0; i<id_clientes.size(); i++){
 
                 if (nome_achado[0].equals(id_clientes.get(i).split(" ")[1])){
-                    nome_label.get(i).setVisible(true);
-                    labels_id.get(i).setVisible(true);
+                    Pessoa1.setText(id_clientes.get(i));
+                    nome_label.get(0).setVisible(true);
+                    labels_id.get(0).setVisible(true);
 
-                    if (em_ligacao.get(i).equals("false")){
-                        button_fone.get(i).setVisible(true);
+                    if (em_ligacao.get(0).equals("false")){
+                        button_fone.get(0).setVisible(true);
                     }
                     else {
-                        button_block.get(i).setVisible(true);
+                        button_block.get(0).setVisible(true);
                     }
                 }
             }
-
         }
-
-
     }
+
     public void changeSceneToRegister(ActionEvent event) throws Exception {
-        URL register = getClass().getClassLoader().getResource("register.fxml");
-        if (register == null) return;
-
-        Parent chatParent = FXMLLoader.load(register);
-        Scene registerScene = new Scene(chatParent);
-
-        // Pega a informção da cena
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        window.setScene(registerScene);
-        window.show();
+        changeSceneToX("register.fxml", event);
     }
+
+    public void retorna(ActionEvent event){
+        try {
+            setPessoas();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
     public void changeSceneToVirtualCall(ActionEvent event) throws Exception {
-        URL virtualCall = getClass().getClassLoader().getResource("virtualCall.fxml");
+        changeSceneToX("virtualCall.fxml", event);
+    }
+    private void changeSceneToX(String x, ActionEvent event) throws Exception {
+        URL virtualCall = getClass().getClassLoader().getResource(x);
         if (virtualCall == null) return;
 
         Parent chatParent = FXMLLoader.load(virtualCall);
@@ -214,6 +215,5 @@ public class ChatController {
         window.setScene(registerScene);
         window.show();
     }
-
 
 }

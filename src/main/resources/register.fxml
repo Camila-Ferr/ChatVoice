@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import java.lang.String?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.grupinix.client.controllers.RegisterController">
     <left>
         <HBox prefHeight="768.0" prefWidth="232.0" styleClass="gray-background" stylesheets="style.css" BorderPane.alignment="CENTER">
@@ -76,11 +77,23 @@
                 </HBox>
                 <HBox prefHeight="658.0" prefWidth="792.0">
                     <children>
-                        <ListView fx:id="NomeListView" prefHeight="657.0" prefWidth="265.0" styleClass="transparent-background" stylesheets="style.css" />
+                        <ListView fx:id="NomeListView" prefHeight="657.0" prefWidth="265.0" stylesheets="style.css">
+                        <styleClass>
+                            <String fx:value="transparent-background" />
+                            <String fx:value="register-letters" />
+                        </styleClass></ListView>
                         <Pane prefHeight="112.0" prefWidth="14.0" styleClass="gray-background" stylesheets="style.css" />
-                        <ListView fx:id="PortaListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="264.0" styleClass="transparent-background" stylesheets="style.css" />
+                        <ListView fx:id="PortaListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="264.0" stylesheets="style.css">
+                            <styleClass>
+                                <String fx:value="transparent-background" />
+                                <String fx:value="register-letters" />
+                            </styleClass></ListView>
                         <Pane layoutX="274.0" layoutY="10.0" prefHeight="112.0" prefWidth="14.0" styleClass="gray-background" stylesheets="style.css" />
-                        <ListView fx:id="IPListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="266.0" styleClass="transparent-background" stylesheets="style.css" />
+                        <ListView fx:id="IPListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="266.0" stylesheets="style.css">
+                            <styleClass>
+                                <String fx:value="transparent-background" />
+                                <String fx:value="register-letters" />
+                            </styleClass></ListView>
                     </children>
                 </HBox>
             </children>
