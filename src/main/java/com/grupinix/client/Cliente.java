@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Cliente extends ChatController {
     private final String SERVER_ADRESS = "localhost";
-    private static final int PORT_SERVIDOR = 9000;
+    private static final int PORT_SERVIDOR = 5000;
     private static final int PORT_LIGACAO = 6000;
     public ClienteSocket clientSocket;
     public static boolean calling = false;

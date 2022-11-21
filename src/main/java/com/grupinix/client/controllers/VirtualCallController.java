@@ -3,6 +3,7 @@ package com.grupinix.client.controllers;
 import com.grupinix.client.Application;
 import com.grupinix.client.Cliente;
 import com.grupinix.client.Message_loop;
+import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -26,8 +27,11 @@ public class VirtualCallController {
         nomeChamada2.setText(cliente.clientSocket.getApelido());
 
     }
-    public void close(){
+    public void close() throws IOException {
+        cliente.clientSocket.msgSend("*saida");
         cliente.close();
+        Platform.exit();
+        System.exit(0);
     }
 
 }

@@ -121,6 +121,11 @@ public class Servidor {
                         cli.sendMessage(" ".concat("$").concat("*rejeita"));
                         socket.sendMessage(" ".concat("$").concat("*rejeita"));
                     }
+                    else if ("*saida".equals(message)){
+                        socket.closeS();
+                        clients.remove(socket);
+                        Comandos.mostra_online(socket,clients);
+                    }
 
                 }
                 System.out.printf("Cliente: %s\n", socket.getRemoteSocketAdress());
