@@ -1,5 +1,6 @@
 package com.grupinix.client;
 
+import com.grupinix.client.controllers.ObserverThread;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,6 +9,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 
 public class Application extends javafx.application.Application {
+    public static ObserverThread observerThread;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -24,6 +26,8 @@ public class Application extends javafx.application.Application {
     }
 
     public static void main(String[] args) {
+        observerThread = new ObserverThread();
+        observerThread.start();
         launch(args);
     }
 }

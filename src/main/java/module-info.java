@@ -17,4 +17,5 @@ module com.grupinix.client {
     opens com.grupinix.client to javafx.fxml;
     exports com.grupinix.client;
     exports com.grupinix.client.controllers;
+    opens com.grupinix.client.controllers to javafx.fxml;
 }

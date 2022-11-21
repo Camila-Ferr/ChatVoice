@@ -31,8 +31,17 @@ public class ClienteSocket {
     }
     public String getMessage() throws IOException {
         String mensagem = "";
-        mensagem = in.readLine();
-        limpaBuffer();
+        long end = System.currentTimeMillis()+200;
+        try {
+            while ((System.currentTimeMillis() < end)) {
+                if (in.ready()) {
+                    mensagem = in.readLine();
+                    System.out.println(mensagem);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return replace(mensagem);
     }
 

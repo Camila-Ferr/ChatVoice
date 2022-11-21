@@ -196,7 +196,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton1" onAction="#changeSceneToVirtualCall" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton1" onAction="#virtualCallButton1" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -239,7 +239,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton2" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton2" mnemonicParsing="false"  onAction="#virtualCallButton2" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -282,7 +282,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton3" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton3" mnemonicParsing="false" onAction="#virtualCallButton3" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -325,7 +325,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton4" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                    <Button id="ButtonCrypto" fx:id="virtualCallButton4" mnemonicParsing="false" onAction="#virtualCallButton4" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -368,7 +368,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="Button" fx:id="virtualCallButton5" mnemonicParsing="false" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="Button" fx:id="virtualCallButton5" mnemonicParsing="false" onAction="#virtualCallButton5" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -411,7 +411,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton6" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton6" mnemonicParsing="false"  opacity="0.0" onAction="#virtualCallButton6" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
@@ -454,7 +454,7 @@
                                                 <Image url="icon-wait.png" />
                                             </image>
                                         </ImageView>
-                                        <Button id="ButtonCrypto" fx:id="virtualCallButton7" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton7" mnemonicParsing="false" onAction="#virtualCallButton7"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>
