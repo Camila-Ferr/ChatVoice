@@ -144,7 +144,7 @@
                                                 <Insets bottom="-55.0" />
                                             </VBox.margin>
                                         </Circle>
-                                        <Button id="ButtonCrypto" fx:id="denyButton" mnemonicParsing="false" onAction="#changeSceneToVirtualCall" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                        <Button id="ButtonCrypto" fx:id="denyButton" mnemonicParsing="false" onAction="#rejeita" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
                                             <cursor>
                                                 <Cursor fx:constant="OPEN_HAND" />
                                             </cursor>

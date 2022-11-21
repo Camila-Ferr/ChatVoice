@@ -58,6 +58,8 @@ public class ChatController  {
     public HBox callHbox;
     public Label nomeCall;
     public Button virtualCallButton1;
+    public Button denyButton;
+    public Button acceptButton;
 
     protected Cliente cliente = LoginController.chatCliente;
     //Nome da pessoa
@@ -267,7 +269,7 @@ public class ChatController  {
             callHbox.setVisible(true);
         });
     }
-    public synchronized void aceita(String from){
+    public synchronized void aceita  (String from) {
         Platform.runLater(() ->{
             setFalse();
             setPessoa1(from);
@@ -337,8 +339,15 @@ public class ChatController  {
         });
     }
 
-
+    public void rejeita(ActionEvent event) throws Exception{
+        cliente.clientSocket.msgSend("*not_ligacao");
+        cliente.clientSocket.msgSend(id);
+        this.callHbox.setVisible(false);
+        id = "";
+    }
     public void changeSceneToVirtualCall(ActionEvent event) throws Exception {
+            cliente.clientSocket.msgSend("*aceita");
+            cliente.clientSocket.msgSend(id);
             changeSceneToX("virtualCall.fxml", event);
     }
     private void changeSceneToX(String x, ActionEvent event) throws Exception {

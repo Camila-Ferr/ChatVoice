@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 public class Servidor {
-    private static final int PORT_SERVIDOR = 9000;
+    private static final int PORT_SERVIDOR = 5000;
     private ServerSocket serverSocket;
     private final ArrayList<ServidorSocket> clients = new ArrayList<>();
 
