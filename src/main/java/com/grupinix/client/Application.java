@@ -10,6 +10,7 @@ import java.net.URL;
 
 public class Application extends javafx.application.Application {
     public static ObserverThread observerThread;
+    public static Message_loop message_loop;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -28,6 +29,7 @@ public class Application extends javafx.application.Application {
     public static void main(String[] args) {
         observerThread = new ObserverThread();
         observerThread.start();
+        message_loop = new Message_loop();
         launch(args);
     }
 }

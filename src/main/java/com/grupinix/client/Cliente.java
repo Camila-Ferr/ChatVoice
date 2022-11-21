@@ -11,7 +11,6 @@ public class Cliente extends ChatController {
     private static final int PORT_SERVIDOR = 9000;
     private static final int PORT_LIGACAO = 6000;
     public ClienteSocket clientSocket;
-    private Scanner scanner;
     public static boolean calling = false;
     
     public Cliente(String apelido) throws IOException {
@@ -24,13 +23,9 @@ public class Cliente extends ChatController {
     }
 
 
-    private void mensage_loop() throws IOException{
-        if (scanner.nextInt() == 1){
-            Ligacao ligacao = new Ligacao(PORT_LIGACAO);
-            Cliente.calling = true;
-            ligacao.init_audio_receive();
-            ligacao.init_audio_send();
-        }
-        
+
+    public void close(){
+        Cliente.calling = false;
     }
+        
 }

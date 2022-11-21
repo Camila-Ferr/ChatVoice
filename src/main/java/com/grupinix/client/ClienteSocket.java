@@ -36,7 +36,6 @@ public class ClienteSocket {
             while ((System.currentTimeMillis() < end)) {
                 if (in.ready()) {
                     mensagem = in.readLine();
-                    System.out.println(mensagem);
                 }
             }
         } catch (IOException e) {

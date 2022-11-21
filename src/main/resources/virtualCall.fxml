@@ -98,10 +98,13 @@
                                         <Image url="icon-end-call.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="endCallButton" mnemonicParsing="false" prefHeight="115.0" prefWidth="114.0" text="Button" visible="false">
+                                <Button fx:id="endCallButton" onAction="#close" mnemonicParsing="false" prefHeight="115.0" prefWidth="114.0" text="Button" visible="false">
                                     <HBox.margin>
                                         <Insets left="-105.0" />
                                     </HBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
                                 </Button>
                             </children>
                         </HBox>

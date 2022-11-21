@@ -15,9 +15,9 @@ public class Ligacao{
     public TargetDataLine audio_in;
     public SourceDataLine audio_out;
 
-    Ligacao (int porta){
-        this.porta = porta;
-        this.enderecoIp = "localhost";
+    Ligacao (String ip){
+        this.porta = 6000;
+        this.enderecoIp = ip;
     }
 
     public static AudioFormat getaudioformat(){

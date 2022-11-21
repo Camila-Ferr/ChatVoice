@@ -18,9 +18,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -79,6 +76,8 @@ public class ChatController  {
     private final ArrayList<ImageView> button_block = new ArrayList<>();
     private final ArrayList<ImageView> waiting = new ArrayList<>();
     private final ArrayList<Label> nome_label = new ArrayList<>();
+    private static String ip;
+    private static String id;
 
     private String pessoas;
     private String ligacao;
@@ -86,6 +85,10 @@ public class ChatController  {
 
 
     public void initialize() throws IOException {
+        if (Application.observerThread.getRerun()){
+            Application.observerThread.setRerun(false);
+
+        }
         CliNickname.setText(cliente.clientSocket.getApelido());
         searchButton.setVisible(true);
 
@@ -136,16 +139,36 @@ public class ChatController  {
         setFalse();
         setPessoas();
 
+
         Application.observerThread.setChatController(this);
         Application.observerThread.setRerun(true);
 
+
     }
-    public void setPessoas () throws IOException {
+    public synchronized void setIp(String ip){
+        this.ip = ip;
+    }
+    public synchronized void setId(String id){
+        this.id = id;
+    }
+    public static synchronized String getIp(){
+        return ip;
+    }
+    public static synchronized String getId(){
+        return id;
+    }
+
+    public synchronized void  setPessoas () throws IOException {
         int indice = 0;
-        cliente.clientSocket.msgSend("*atualiza");
-        pessoas = cliente.clientSocket.getMessage();
-        cliente.clientSocket.msgSend("*ligacao");
-        ligacao = cliente.clientSocket.getMessage();
+        try {
+            cliente.clientSocket.msgSend("*atualiza");
+            pessoas = cliente.clientSocket.getMessage();
+            cliente.clientSocket.msgSend("*ligacao");
+
+            ligacao = cliente.clientSocket.getMessage();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
         Pattern regex = Pattern.compile("\\((.*?)\\)");
@@ -154,13 +177,13 @@ public class ChatController  {
         Pattern regex2 = Pattern.compile("\\((.*?)\\)");
         Matcher regexMatcher2 = regex2.matcher(ligacao);
 
-        while (regexMatcher2.find()){
+        while (regexMatcher2.find()) {
             em_ligacao.add(regexMatcher2.group(1));
         }
         while (regexMatcher.find()) {
             String nome = regexMatcher.group(1);
             id_clientes.add(nome);
-            if (indice <7) {
+            if (indice < 7) {
                 labels_id.get(indice).setText(id_clientes.get(indice));
 
                 if (em_ligacao.get(indice).equals("true")) {
@@ -172,10 +195,10 @@ public class ChatController  {
                 labels_id.get(indice).setVisible(true);
                 nome_label.get(indice).setVisible(true);
             }
-            indice = indice +1;
+            indice = indice + 1;
         }
     }
-    public void setFalse(){
+    public synchronized void setFalse(){
         for (Label pessoa: labels_id){
             pessoa.setVisible(false);
         }
@@ -192,7 +215,17 @@ public class ChatController  {
             wait.setVisible(false);
         }
     }
+    public synchronized void setImagePhone1(Boolean set){
+        ImagePhone1.setVisible(set);
+    }
+    public synchronized void setWaitImageView1(Boolean set){
+        waitImageView1.setVisible(set);
+    }
 
+    public synchronized void setPessoa1(String id){
+        Pessoa1.setVisible(true);
+        Pessoa1.setText(id);
+    }
     public void pesquisa() throws IOException, InterruptedException {
 
         cliente.clientSocket.msgSend("*acha");
@@ -207,6 +240,7 @@ public class ChatController  {
     }
     public synchronized void pesquisado(String[] nome_achado){
         Platform.runLater(() -> {
+            setFalse();
             if (!nome_achado[0].equals("()")) {
                 for (int i = 0; i < id_clientes.size(); i++) {
 
@@ -227,13 +261,26 @@ public class ChatController  {
     }
 
     public synchronized void convite(String from){
-        Platform.runLater(() ->{
+        Platform.runLater(() -> {
+
             nomeCall.setText(from);
             callHbox.setVisible(true);
         });
     }
+    public synchronized void aceita(String from){
+        Platform.runLater(() ->{
+            setFalse();
+            setPessoa1(from);
+            setCalling(true);
+            setImagePhone1(true);
+            setWaitImageView1(false);
+        });
+    }
+
+
 
     public void changeSceneToRegister(ActionEvent event) throws Exception {
+
         changeSceneToX("register.fxml", event);
     }
 
@@ -292,9 +339,10 @@ public class ChatController  {
 
 
     public void changeSceneToVirtualCall(ActionEvent event) throws Exception {
-        changeSceneToX("virtualCall.fxml",event);
+            changeSceneToX("virtualCall.fxml", event);
     }
     private void changeSceneToX(String x, ActionEvent event) throws Exception {
+        Application.observerThread.setRerun(false);
         URL virtualCall = getClass().getClassLoader().getResource(x);
         if (virtualCall == null) return;
 
