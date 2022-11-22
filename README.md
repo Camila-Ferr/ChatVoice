@@ -1,6 +1,6 @@
 # ChatVoice
 
-## O ChatVoice é um projeto desenvolvido para a matéria Redes de Computadores II do curso de Ciência da Computação da Universidade Federal Fluminense.
+<p> O ChatVoice é um projeto desenvolvido para a matéria Redes de Computadores II do curso de Ciência da Computação da Universidade Federal Fluminense.</p>
 
 ### 👨‍💻 Desenvolvedores: Camila Ferreira, Thiago Mozart e Rodrigo Barroso
 
@@ -16,8 +16,16 @@ Assim, de forma fácil e interativa, os usuários podem estabelecer conexões en
 ### :book: Bibliotecas utilizada: JavaFX
 
 ### :pencil2: Como executar a aplicação?
-**Execute os seguintes comandos em seu terminal:**  
+**Para executar o servidor de registros :**
 ```
-mvn clean package  
-mvn build
+Execute a classe "Servidor" 
 ```
+**Para executar o Cliente:**
+```
+Modifique o endereço ip na classe Cliente 
+```
+**Execute o comando em seu terminal:**  
+```
+maven clean package  
+```
+**Logo após, execute a classe Application.**
