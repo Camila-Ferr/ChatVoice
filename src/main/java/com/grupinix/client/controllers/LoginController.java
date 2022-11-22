@@ -34,7 +34,8 @@ public class LoginController {
 
     public void connect() throws IOException {
         String apelido = Nickname.getText();
-        chatCliente = new Cliente(apelido);
+        String ip = Nickname.getText(); //TODO: CRIAR UM LABEL PARA IP E MODIFICAR ESSA LINHA
+        chatCliente = new Cliente(apelido,ip);
 
         if (chatCliente.clientSocket.getMessage().equals("-1")){
             nomeInvalidoLabel.setVisible(true);

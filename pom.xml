@@ -15,31 +15,37 @@
 
     <dependencies>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>11.0.2</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11.0.2</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
             <version>11.0.2</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
             <version>11.0.2</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.controlsfx</groupId>
             <artifactId>controlsfx</artifactId>
             <version>11.1.1</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>com.dlsc.formsfx</groupId>
             <artifactId>formsfx-core</artifactId>
             <version>11.3.2</version>
@@ -51,6 +57,7 @@
             </exclusions>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>net.synedra</groupId>
             <artifactId>validatorfx</artifactId>
             <version>0.2.1</version>
@@ -62,16 +69,19 @@
             </exclusions>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.kordamp.ikonli</groupId>
             <artifactId>ikonli-javafx</artifactId>
             <version>12.3.0</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.kordamp.bootstrapfx</groupId>
             <artifactId>bootstrapfx-core</artifactId>
             <version>0.4.0</version>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>eu.hansolo</groupId>
             <artifactId>tilesfx</artifactId>
             <version>11.48</version>
@@ -83,6 +93,7 @@
             </exclusions>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>com.github.almasb</groupId>
             <artifactId>fxgl</artifactId>
             <version>11.17</version>
@@ -94,16 +105,16 @@
             </exclusions>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
+            <scope>compile</scope>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
