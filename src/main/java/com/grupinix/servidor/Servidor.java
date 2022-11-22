@@ -75,15 +75,15 @@ public class Servidor {
                         return;
                     }
                     else if ("*atualiza".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         Comandos.envia_online(socket, clients);
                     }
                     else if ("*ligacao".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         Comandos.em_ligacao(socket, clients);
                     }
                     else if ("*acha".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         System.out.println("****");
                         String nome = socket.getMessage();
                         ServidorSocket socket_procurado = Comandos.procura_cliente(clients, nome);
@@ -98,7 +98,7 @@ public class Servidor {
 
                     }
                     else if ("*inicia_ligacao".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         String id_cliente = socket.getMessage();
                         ServidorSocket cli = Comandos.procura_cliente(clients, id_cliente);
                         cli.sendMessage(socket.getClient_id().concat("$").concat(socket.getRemoteSocketAdress().toString()).concat("$").concat("*convite"));
@@ -106,7 +106,7 @@ public class Servidor {
 
                     }
                     else if ("*aceita".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         String id_cliente = socket.getMessage();
                         ServidorSocket cli = Comandos.procura_cliente(clients, id_cliente);
                         cli.sendMessage(socket.getClient_id().concat("$").concat(socket.getRemoteSocketAdress().toString().concat("$").concat("*aceita")));
@@ -115,7 +115,7 @@ public class Servidor {
                         cli.setLigacao(true);
                     }
                     else if ("*not_ligacao".equals(message)){
-                        System.out.println("Recebi de" +socket.getClient_id()+ " : " +message);
+                        System.out.println("Recebi de " +socket.getClient_id()+ " : " +message);
                         String id_cliente = socket.getMessage();
                         ServidorSocket cli = Comandos.procura_cliente(clients, id_cliente);
                         cli.sendMessage(" ".concat("$").concat("*rejeita"));
