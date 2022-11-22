@@ -21,6 +21,7 @@ public class LoginController {
 
     public static Cliente chatCliente;
     public Button Conectar;
+    public TextField IPServer;
 
     private boolean changeScene;
 
@@ -34,7 +35,8 @@ public class LoginController {
 
     public void connect() throws IOException {
         String apelido = Nickname.getText();
-        String ip = Nickname.getText(); //TODO: CRIAR UM LABEL PARA IP E MODIFICAR ESSA LINHA
+        String ip = IPServer.getText();
+        
         chatCliente = new Cliente(apelido,ip);
 
         if (chatCliente.clientSocket.getMessage().equals("-1")){
