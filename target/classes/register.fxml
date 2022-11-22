@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import java.lang.String?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.grupinix.client.controllers.RegisterController">
+    <left>
+        <HBox prefHeight="768.0" prefWidth="232.0" styleClass="gray-background" stylesheets="style.css" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <VBox alignment="CENTER" prefHeight="768.0" prefWidth="234.0" styleClass="dark-gray-background" stylesheets="style.css">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="269.0" text="Registro :" textFill="#fcfcfc">
+                            <font>
+                                <Font name="Roboto Slab Regular" size="26.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="200.0" top="-300.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Button id="ButtonCall" fx:id="registryToCallCenterButton" onAction="#changeSceneToChat" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="53.0" prefWidth="49.0" text="call">
+                            <cursor>
+                                <Cursor fx:constant="OPEN_HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets bottom="-58.0" />
+                            </VBox.margin>
+                        </Button>
+                        <ImageView fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="icon-call.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </ImageView>
+                    </children></VBox>
+            </children>
+        </HBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="113.0" prefWidth="792.0" styleClass="white-ice-background" stylesheets="style.css">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="269.0" text="Nome" textFill="#46474a">
+                            <font>
+                                <Font name="Roboto Slab Regular" size="26.0" />
+                            </font>
+                        </Label>
+                        <Pane prefHeight="112.0" prefWidth="17.0" styleClass="gray-background" stylesheets="style.css" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="114.0" prefWidth="269.0" text="Porta" textFill="#46474a">
+                            <font>
+                                <Font name="Roboto Slab Regular" size="26.0" />
+                            </font>
+                        </Label>
+                        <Pane layoutX="272.0" layoutY="10.0" prefHeight="112.0" prefWidth="17.0" styleClass="gray-background" stylesheets="style.css" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="114.0" prefWidth="269.0" text="IP" textFill="#46474a">
+                            <font>
+                                <Font name="Roboto Slab Regular" size="26.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="658.0" prefWidth="792.0">
+                    <children>
+                        <ListView fx:id="NomeListView" prefHeight="657.0" prefWidth="265.0" stylesheets="style.css">
+                        <styleClass>
+                            <String fx:value="transparent-background" />
+                            <String fx:value="register-letters" />
+                        </styleClass></ListView>
+                        <Pane prefHeight="112.0" prefWidth="14.0" styleClass="gray-background" stylesheets="style.css" />
+                        <ListView fx:id="PortaListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="264.0" stylesheets="style.css">
+                            <styleClass>
+                                <String fx:value="transparent-background" />
+                                <String fx:value="register-letters" />
+                            </styleClass></ListView>
+                        <Pane layoutX="274.0" layoutY="10.0" prefHeight="112.0" prefWidth="14.0" styleClass="gray-background" stylesheets="style.css" />
+                        <ListView fx:id="IPListView" layoutX="10.0" layoutY="10.0" prefHeight="657.0" prefWidth="266.0" stylesheets="style.css">
+                            <styleClass>
+                                <String fx:value="transparent-background" />
+                                <String fx:value="register-letters" />
+                            </styleClass></ListView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

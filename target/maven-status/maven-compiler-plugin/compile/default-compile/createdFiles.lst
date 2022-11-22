@@ -1,0 +1,6 @@
+com\grupinix\client\controllers\LoginController.class
+com\grupinix\client\controllers\VirtualCallController.class
+com\grupinix\client\Application.class
+com\grupinix\client\controllers\ChatController.class
+module-info.class
+com\grupinix\client\controllers\RegisterController.class

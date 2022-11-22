@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.grupinix.client.controllers.ChatController">
+    <left>
+        <HBox prefHeight="768.0" prefWidth="234.0" styleClass="gray-background" stylesheets="style.css" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <VBox alignment="CENTER" prefHeight="768.0" prefWidth="234.0" styleClass="dark-gray-background" stylesheets="style.css">
+                    <children>
+                        <Button id="register" fx:id="registerButton" onAction="#changeSceneToRegister" mnemonicParsing="false" opacity="0.0" pickOnBounds="false" prefHeight="67.0" prefWidth="57.0" text="Register">
+                            <cursor>
+                                <Cursor fx:constant="OPEN_HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets bottom="-68.0" />
+                            </VBox.margin>
+                        </Button>
+                        <ImageView fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="icon-register.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </ImageView>
+                        <Button id="ButtonRooms" fx:id="returnButton" mnemonicParsing="false"  opacity="0.0" onAction="#retorna" prefHeight="58.0" prefWidth="61.0" text="Return">
+                            <VBox.margin>
+                                <Insets bottom="-100.0" top="50.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="OPEN_HAND" />
+                            </cursor>
+                        </Button>
+                        <ImageView fx:id="" fitHeight="73.0" fitWidth="67.0" layoutX="24.0" layoutY="341.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="icon-return.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="40.0" />
+                            </VBox.margin>
+                        </ImageView>
+                    </children></VBox>
+            </children>
+        </HBox>
+    </left>
+    <center>
+        <VBox prefHeight="768.0" prefWidth="849.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="709.0" styleClass="white-ice-background" stylesheets="style.css">
+                    <children>
+                        <Label fx:id="CliNickname" prefHeight="33.0" prefWidth="120.0" text="Nome" textFill="#9da7a7">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Roboto Slab Regular" size="24.0" />
+                            </font>
+                        </Label>
+                        <Circle fill="#78a2d2" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label prefHeight="20.0" prefWidth="63.0" text="Online" textFill="#9da7a7">
+                            <font>
+                                <Font name="Roboto Slab Regular" size="16.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" right="175.0" />
+                            </HBox.margin>
+                        </Label>
+                        <HBox fx:id="callHbox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="400.0" styleClass="gray-background" stylesheets="style.css">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="96.0" prefWidth="149.0">
+                                    <children>
+                                        <Label text="Chamada" textFill="#fcfcfc">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="22.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label layoutX="30.0" layoutY="15.0" text="from :" textFill="#fcfcfc">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="22.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label fx:id="nomeCall" prefHeight="30.0" prefWidth="106.0" text="Nome" textFill="#fcfcfc">
+                                    <font>
+                                        <Font name="Roboto Slab Regular" size="22.0" />
+                                    </font>
+                                </Label>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Circle fx:id="acceptCircle" fill="#81dd86" radius="30.0" stroke="#81dd86" strokeType="INSIDE">
+                                            <effect>
+                                                <Blend />
+                                            </effect>
+                                            <VBox.margin>
+                                                <Insets bottom="-55.0" />
+                                            </VBox.margin>
+                                        </Circle>
+                                        <Button id="ButtonCrypto" fx:id="acceptButton" mnemonicParsing="false" onAction="#changeSceneToVirtualCall" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <VBox.margin>
+                                                <Insets bottom="-50.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="acceptImageView" fitHeight="47.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="call-accept.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" layoutX="221.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Circle fx:id="denyCircle" fill="#f57e7e" radius="30.0" stroke="#f57e7e" strokeType="INSIDE">
+                                            <effect>
+                                                <Blend />
+                                            </effect>
+                                            <VBox.margin>
+                                                <Insets bottom="-55.0" />
+                                            </VBox.margin>
+                                        </Circle>
+                                        <Button id="ButtonCrypto" fx:id="denyButton" mnemonicParsing="false" onAction="#rejeita" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <VBox.margin>
+                                                <Insets bottom="-50.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="denyImageView" fitHeight="47.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="call-deny.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <ScrollPane id="ScrollPane_chat" fx:id="scrollPane_chat" prefHeight="578.0" prefWidth="709.0" styleClass="transparent-background" stylesheets="style.css">
+                    <content>
+                        <VBox prefHeight="570.0" prefWidth="789.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label text="Ligações :" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome1" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa1" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 1" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView1" fitHeight="49.0" fitWidth="50.0" layoutX="705.0" layoutY="21.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton1" onAction="#virtualCallButton1" mnemonicParsing="false"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone1" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock1" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="103.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome2" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa2" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 2" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView2" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton2" mnemonicParsing="false"  onAction="#virtualCallButton2" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone2" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock2" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="196.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome3" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa3" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 3" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView3" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton3" mnemonicParsing="false" onAction="#virtualCallButton3" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone3" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock3" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="289.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome4" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa4" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 4" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView4" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                    <Button id="ButtonCrypto" fx:id="virtualCallButton4" mnemonicParsing="false" onAction="#virtualCallButton4" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone4" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock4" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="289.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label fx:id="Nome5" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa5" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 5" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView5" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="Button" fx:id="virtualCallButton5" mnemonicParsing="false" onAction="#virtualCallButton5" opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone5" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock5" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="382.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome6" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa6" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 6" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView6" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton6" mnemonicParsing="false"  opacity="0.0" onAction="#virtualCallButton6" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone6" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock6" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="498.0" prefHeight="93.0" prefWidth="789.0">
+                                    <children>
+                                        <Label  fx:id="Nome7" text="Nome : " textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="Pessoa7" layoutX="10.0" layoutY="39.0" prefHeight="35.0" prefWidth="479.0" text="PESSOA 7" textFill="#46474a">
+                                            <font>
+                                                <Font name="Roboto Slab Regular" size="26.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="15.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fx:id="waitImageView7" fitHeight="49.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-wait.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Button id="ButtonCrypto" fx:id="virtualCallButton7" mnemonicParsing="false" onAction="#virtualCallButton7"  opacity="0.0" pickOnBounds="false" prefHeight="50.0" prefWidth="54.0" text="Call">
+                                            <cursor>
+                                                <Cursor fx:constant="OPEN_HAND" />
+                                            </cursor>
+                                            <HBox.margin>
+                                                <Insets right="-62.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <ImageView fx:id="ImagePhone7" fitHeight="73.0" fitWidth="67.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-phone.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="ImageBlock7" fitHeight="49.0" fitWidth="50.0" layoutX="420.0" layoutY="23.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="icon-block.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content></ScrollPane>
+                <HBox prefHeight="100.0" prefWidth="200.0" styleClass="gray-background" stylesheets="style.css">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="97.0" prefWidth="254.0">
+                            <children>
+                                <Label text="Pesquisa :" textFill="#fcfcfc">
+                                    <font>
+                                        <Font name="Roboto Slab Regular" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="97.0" prefWidth="357.0">
+                            <children>
+                                <TextField fx:id="TextFieldSearch" prefHeight="20.0" prefWidth="357.0" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="-100.0" prefWidth="10.0">
+                            <children>
+                                <Button fx:id="searchButton" onAction="#pesquisa" mnemonicParsing="false" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                    <VBox.margin>
+                                        <Insets bottom="-40.0"/>
+                                    </VBox.margin>
+                                    <cursor>
+                                        <Cursor fx:constant="OPEN_HAND" />
+                                    </cursor>
+                                </Button>
+                                <ImageView fx:id="barraPesquisa" fitHeight="71.0" mouseTransparent="true" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="icon-button-cyan.png" />
+                                    </image>
+                                    <VBox.margin>
+                                        <Insets top="-15.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                    </children></HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
