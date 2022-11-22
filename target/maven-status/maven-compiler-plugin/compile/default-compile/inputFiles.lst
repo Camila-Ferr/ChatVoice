@@ -1,6 +1,17 @@
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\com\grupinix\client\controllers\RegisterController.java
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\com\grupinix\client\controllers\VirtualCallController.java
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\com\grupinix\client\controllers\ChatController.java
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\com\grupinix\client\controllers\LoginController.java
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\com\grupinix\client\Application.java
-C:\Users\regin\OneDrive\Área de Trabalho\ChatVoice-frontEnd2\client\src\main\java\module-info.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/controllers/RegisterController.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/controllers/ObserverThread.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/controllers/ChatController.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/Message_loop.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/ReceiveThread.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/servidor/Servidor.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/servidor/ServidorSocket.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/Application.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/SendThread.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/Cliente.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/ClienteSocket.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/module-info.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/Ligacao.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/servidor/Comandos.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/controllers/VirtualCallController.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/Main.java
+/home/mozart/Documents/Programing/ajustandoChatVoice/ChatVoice-integracao/src/main/java/com/grupinix/client/controllers/LoginController.java

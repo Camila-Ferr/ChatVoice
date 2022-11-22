@@ -21,6 +21,7 @@ public class LoginController {
 
     public static Cliente chatCliente;
     public Button Conectar;
+    public TextField IPServer;
 
     private boolean changeScene;
 
@@ -34,7 +35,9 @@ public class LoginController {
 
     public void connect() throws IOException {
         String apelido = Nickname.getText();
-        chatCliente = new Cliente(apelido);
+        String ip = IPServer.getText();
+        
+        chatCliente = new Cliente(apelido,ip);
 
         if (chatCliente.clientSocket.getMessage().equals("-1")){
             nomeInvalidoLabel.setVisible(true);
